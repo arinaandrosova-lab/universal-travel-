@@ -1,0 +1,467 @@
+/* Базові налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #4ecdc4;
+    --dark-color: #2f3e46;
+    --light-color: #f7f9fa;
+}
+
+body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка сайту */
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+.logo i {
+    color: var(--primary-color);
+    animation: spin 10s linear infinite; /* Крута анімація компаса */
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-links a {
+    color: var(--dark-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Красива анімація ліній під кнопками меню */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-nav {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 20px;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Головний банер */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 54px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.btn-main {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.btn-main:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Секція турів */
+.tours-section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tour-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tour-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.tour-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.price {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.tour-info {
+    padding: 25px;
+}
+
+.tour-info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.tour-info p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+    height: 66px;
+    overflow: hidden;
+}
+
+.tour-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.tour-footer span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.btn-card {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-card:hover {
+    color: var(--dark-color);
+}
+
+/* Секція "Про нас" */
+.about-section {
+    background: linear-gradient(135deg, #e0f2f1 0%, #f7f9fa 100%);
+    padding: 80px 0;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+}
+
+.about-item {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: transform 0.3s;
+}
+
+.about-item:hover {
+    transform: translateY(-5px);
+}
+
+.about-item i {
+    font-size: 40px;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.about-item h3 {
+    margin-bottom: 15px;
+}
+
+/* Форма і контакти */
+.contact-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-text, .contact-form-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-items {
+    margin-top: 30px;
+}
+
+.contact-items p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-items i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+    width: 20px;
+}
+
+.contact-form input, .contact-form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: var(--light-color);
+}
+
+.contact-form input:focus, .contact-form select:focus {
+    border-color: var(--secondary-color);
+}
+
+.btn-submit {
+    background-color: var(--dark-color);
+    color: #fff;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-color);
+}
+
+/* Інтерактивне Модальне Вікно (Поп-ап) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+}
+
+.modal-overlay.active .modal-box {
+    transform: scale(1);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-modal-btn:hover {
+    color: #333;
+}
+
+.modal-body {
+    margin: 25px 0;
+    text-align: left;
+}
+
+.modal-body h4 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.modal-meta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--light-color);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Підвал */
+footer {
+    background-color: var(--dark-color);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 768px) {
+    .nav-links, .btn-nav {
+        display: none;
+    }
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}

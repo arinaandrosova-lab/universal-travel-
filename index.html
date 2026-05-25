@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSAL TRAVEL | Незабутні подорожі</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><i class="fa-solid fa-compass"></i> UNIVERSAL <span>TRAVEL</span></a>
+            <nav class="nav-links">
+                <a href="#home">Головна</a>
+                <a href="#tours">Всі тури</a>
+                <a href="#contact">Контакти</a>
+            </nav>
+            <a href="#contact" class="btn btn-nav">Забронювати</a>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Відкривай світ разом з нами</h1>
+            <p>Неймовірні пригоди, перевірені маршрути та найкращий відпочинок для вашої душі.</p>
+            <a href="#tours" class="btn btn-main">Дивитися тури</a>
+        </div>
+    </section>
+
+    <section id="tours" class="tours-section">
+        <div class="container">
+            <h2 class="section-title">Наші напрямки</h2>
+            <div class="tours-grid">
+                
+                <div class="tour-card" data-country="Латвія" data-fact="Рига має найбільшу колекцію будівель у стилі модерн (Art Nouveau) в Європі. А ще тут винайшли знаменитий Ризький чорний бальзам!" data-days="5 днів" data-price="$220">
+                    <div class="tour-img" style="background-image: url('img/1.jpg');">
+                        <span class="price">$220</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Затишна Латвія</h3>
+                        <p>Старовинна архітектура Риги, затишні кав'ярні та прогулянки узбережжям Юрмали.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 5 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Швейцарія" data-fact="У Швейцарії понад 7000 озер, і з будь-якого відкритого джерела чи фонтану можна пити воду — вона там чистіша, ніж у пляшках!" data-days="7 днів" data-price="$850">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1486916856992-e4db22c8df33?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$850</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Велична Швейцарія</h3>
+                        <p>Альпійські вершини, кришталеві озера та швейцарський шоколад найвищої якості.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 7 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Фінляндія" data-fact="Фінляндію називають країною тисячі озер (їх тут майже 188 000). Також це офіційна батьківщина Санта-Клауса в Лапландії." data-days="6 днів" data-price="$640">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$640</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Магічна Фінляндія</h3>
+                        <p>Північне сяйво, затишні сауни, катання на оленячих упряжках та казкова Лапландія.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 6 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Швеція" data-fact="Швеція настільки успішна в переробці сміття, що імпортує його з інших країн, щоб забезпечувати енергією свої заводи!" data-days="6 днів" data-price="$590">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1504109586057-7a2ae83d1338?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$590</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Стильна Швеція</h3>
+                        <p>Прогресивний Стокгольм, традиція «фіка» (кава з булочкою) та велич скандинавської природи.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 6 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Естонія" data-fact="Естонія — лідер у сфері цифрових технологій. Навіть голосувати на виборах чи відкрити бізнес тут можна онлайн за пару хвилин." data-days="4 дні" data-price="$199">
+                    <div class="tour-img" style="background-image: url('img/2.jpg');">
+                        <span class="price">$199</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Цифрова Естонія</h3>
+                        <p>Середньовічний Старий Таллінн, сучасні арт-квартали та незаймані лісові парки.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 4 дні</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Polshcha" data-fact="Польща має найбільший замок у світі за площею — Мальборк. А під Краковом розташовані неймовірні соляні шахти Величка." data-days="4 дні" data-price="$150">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$150</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Гостинна Польща</h3>
+                        <p>Королівський Краків, сучасна Варшава, смачна національна кухня та величні Татри.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 4 дні</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Угорщина" data-fact="Будапешт має найбільшу систему термальних джерел у світі. Також угорська мова вважається однією з найскладніших в Європі." data-days="3 дні" data-price="$165">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$165</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Термальна Угорщина</h3>
+                        <p>Купальні Будапешта, велична будівня Парламенту та дегустація токайських вин.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 3 дні</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Чехія" data-fact="У Чехії розташована найбільша кількість замків на квадратний кілометр у всій Європі — понад 2000 історичних фортець!" data-days="4 дні" data-price="$180">
+                    <div class="tour-img" style="background-image: url('img/3.jpg');">
+                        <span class="price">$180</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Готична Чехія</h3>
+                        <p>Казкова Прага, Карлів міст, унікальна архітектура та відомі середньовічні традиції.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 4 дні</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Австрія" data-fact="Відень регулярно визнають найкращим містом для життя у світі. Саме тут народився класичний вальс та видатний Моцарт." data-days="5 днів" data-price="$390">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$390</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Класична Австрія</h3>
+                        <p>Імператорський Відень, палац Шенбрунн, альпійське містечко Гальштат та вишукана опера.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 5 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Литва" data-fact="У Вільнюсі є республіка Ужупіс — район митців, який має власну конституцію, валюту, президента і армію з 12 людей." data-days="3 дні" data-price="$140">
+                    <div class="tour-img" style="background-image: url('img/4.jpg');">
+                        <span class="price">$140</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Автентична Литва</h3>
+                        <p>Затишні вулички Вільнюса, Тракайський замок посеред озера та цілюще повітря.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 3 дні</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Німеччина" data-fact="Понад 65% німецьких автобанів не мають жодного обмеження швидкості! А замок Нойшванштайн надихнув Волта Діснея." data-days="6 днів" data-price="$420">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$420</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Масштабна Німеччина</h3>
+                        <p>Сучасний Берлін, замок Нойшванштайн, казкова Баварія та мальовнича долина Рейну.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 6 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Нідерланди" data-fact="Амстердам побудований на 11 мільйонах дерев'яних паль. Велосипедів тут офіційно більше, ніж самих жителів!" data-days="5 днів" data-price="$499">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$499</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Яскраві Нідерланди</h3>
+                        <p>Канали Амстердама, поля різнокольорових тюльпанів, вітряки та унікальна атмосфера свободи.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 5 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Франція" data-fact="Франція — найвідвідуваніша країна у світі. А щоб роздивитися кожен експонат у Луврі, знадобиться близько 100 днів!" data-days="6 днів" data-price="$550">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$550</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Шарм Франції</h3>
+                        <p>Ейфелева вежа, Лувр, ароматні круасани Парижа та розкішний Лазурний берег.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 6 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Італія" data-fact="В Італії розташовано три активні вулкани, а у знаменитий фонтан Треві в Римі туристи щодня кидають понад 3000 євро." data-days="7 днів" data-price="$580">
+                    <div class="tour-img" style="background-image: url('img/5.jpg');">
+                        <span class="price">$580</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Сонячна Італія</h3>
+                        <p>Колізей у Римі, романтичні канали Венеції, шедеври Флоренції та найкраща у світі піца.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 7 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-country="Греція" data-fact="Греція має понад 2000 красивих островів, але лише 170 з них заселені. Сонце тут світить понад 250 днів на рік!" data-days="7 днів" data-price="$460">
+                    <div class="tour-img" style="background-image: url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=600&q=80');">
+                        <span class="price">$460</span>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Антична Греція</h3>
+                        <p>Величний Акрополь, біло-блакитні будиночки Санторіні та відпочинок на Егейському морі.</p>
+                        <div class="tour-footer">
+                            <span><i class="fa-regular fa-clock"></i> 7 днів</span>
+                            <button class="btn-card open-modal">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-text">
+                    <h2>Бажаєте підібрати тур?</h2>
+                    <p>Залиште заявку, і наш менеджер зв'яжеться з вами протягом 15 хвилин, щоб запропонувати найкращі варіанти.</p>
+                    <div class="contact-items">
+                        <p><i class="fa-solid fa-phone"></i> +38 (093) 852-27-55</p>
+                        <p><i class="fa-solid fa-location-dot"></i> Київська область
+м. Вишневе, вул. Марії Приймаченко 22/27</p>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form" id="mainForm">
+                        <input type="text" placeholder="Ваше ім'я" required>
+                        <input type="tel" placeholder="Номер телефону" required>
+                        <select required id="formSelect">
+                            <option value="" disabled selected>Оберіть напрямок</option>
+                            <option value="Латвія">Латвія</option>
+                            <option value="Швейцарія">Швейцарія</option>
+                            <option value="Фінляндія">Фінляндія</option>
+                            <option value="Швеція">Швеція</option>
+                            <option value="Естонія">Естонія</option>
+                            <option value="Польща">Польща</option>
+                            <option value="Угорщина">Угорщина</option>
+                            <option value="Чехія">Чехія</option>
+                            <option value="Австрія">Австрія</option>
+                            <option value="Литва">Литва</option>
+                            <option value="Німеччина">Німеччина</option>
+                            <option value="Нідерланди">Нідерланди</option>
+                            <option value="Франція">Франція</option>
+                            <option value="Італія">Італія</option>
+                            <option value="Греція">Греція</option>
+                        </select>
+                        <button type="submit" class="btn btn-submit">Надіслати запит</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="tourModal">
+        <div class="modal-box">
+            <button class="close-modal-btn">&times;</button>
+            <h2 id="modalTitle">Назва країни</h2>
+            <div class="modal-body">
+                <h4>💡 Цікавий факт про країну:</h4>
+                <p id="modalFact">Тут буде цікавий факт.</p>
+                <div class="modal-meta">
+                    <span><i class="fa-regular fa-clock"></i> Тривалість: <strong id="modalDays">7 днів</strong></span>
+                    <span><i class="fa-solid fa-wallet"></i> Вартість: <strong id="modalPrice">$500</strong></span>
+                </div>
+            </div>
+            <button class="btn btn-main" id="modalBookBtn">Хочу в цей тур!</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 UNIVERSAL TRAVEL. Усі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
