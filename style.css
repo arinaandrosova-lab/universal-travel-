@@ -29,7 +29,7 @@ body {
 /* Шапка сайту */
 .navbar {
     background-color: #ffffff;
-    padding: 20px 0;
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -44,35 +44,41 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--dark-color);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Відступ між вашою картинкою та текстом */
 }
 
-.logo i {
-    color: var(--primary-color);
-    animation: spin 10s linear infinite; /* Крута анімація компаса */
-}
-
-@keyframes spin {
-    100% { transform: rotate(360deg); }
+/* Стиль для вашої власної картинки-логотипу */
+.custom-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; /* Робить картинку круглою, якщо треба квадратну — видаліть цей рядок */
+    object-fit: cover;
 }
 
 .logo span {
     color: var(--secondary-color);
 }
 
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
 .nav-links a {
     color: var(--dark-color);
     text-decoration: none;
-    margin: 0 15px;
     font-weight: 600;
     position: relative;
     padding-bottom: 5px;
+    font-size: 14px;
 }
 
-/* Красива анімація ліній під кнопками меню */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -91,20 +97,20 @@ body {
 /* Кнопки */
 .btn {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 10px 22px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     border: none;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .btn-nav {
     background-color: transparent;
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
-    padding: 8px 20px;
 }
 
 .btn-nav:hover {
@@ -127,7 +133,7 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 54px;
+    font-size: 48px;
     margin-bottom: 20px;
     font-weight: 700;
     text-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -135,7 +141,7 @@ body {
 }
 
 .hero-content p {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px;
     max-width: 600px;
     margin-left: auto;
@@ -156,25 +162,19 @@ body {
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Секція турів */
 .tours-section {
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .section-title {
     text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
+    font-size: 32px;
+    margin-bottom: 40px;
     position: relative;
 }
 
@@ -190,8 +190,8 @@ body {
 
 .tours-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .tour-card {
@@ -208,7 +208,7 @@ body {
 }
 
 .tour-img {
-    height: 220px;
+    height: 200px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -216,28 +216,29 @@ body {
 
 .price {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 15px;
+    left: 15px;
     background-color: var(--secondary-color);
     color: #fff;
-    padding: 5px 15px;
+    padding: 5px 12px;
     border-radius: 20px;
     font-weight: 700;
+    font-size: 14px;
 }
 
 .tour-info {
-    padding: 25px;
+    padding: 20px;
 }
 
 .tour-info h3 {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .tour-info p {
     color: #777;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     height: 66px;
     overflow: hidden;
 }
@@ -247,11 +248,11 @@ body {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #eee;
-    padding-top: 15px;
+    padding-top: 12px;
 }
 
 .tour-footer span {
-    font-size: 14px;
+    font-size: 13px;
     color: #aaa;
 }
 
@@ -260,7 +261,7 @@ body {
     border: none;
     color: var(--primary-color);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
     transition: color 0.2s;
 }
@@ -272,93 +273,75 @@ body {
 /* Секція "Про нас" */
 .about-section {
     background: linear-gradient(135deg, #e0f2f1 0%, #f7f9fa 100%);
-    padding: 80px 0;
+    padding: 70px 0;
 }
 
 .about-grid {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
     text-align: center;
 }
 
 .about-item {
     background-color: #fff;
-    padding: 40px 30px;
+    padding: 30px;
     border-radius: 12px;
     flex: 1;
     min-width: 250px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-    transition: transform 0.3s;
-}
-
-.about-item:hover {
-    transform: translateY(-5px);
 }
 
 .about-item i {
-    font-size: 40px;
+    font-size: 35px;
     color: var(--secondary-color);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
-.about-item h3 {
-    margin-bottom: 15px;
-}
-
-/* Форма і контакти */
+/* Контакти і форма */
 .contact-section {
     background-color: #ffffff;
-    padding: 100px 0;
+    padding: 80px 0;
 }
 
 .contact-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
 }
 
 .contact-text, .contact-form-container {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .contact-text h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact-items {
-    margin-top: 30px;
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
 .contact-items p {
-    margin-bottom: 15px;
-    font-size: 16px;
+    margin-bottom: 12px;
+    font-size: 15px;
     font-weight: 600;
 }
 
 .contact-items i {
     color: var(--secondary-color);
     margin-right: 10px;
-    width: 20px;
 }
 
 .contact-form input, .contact-form select {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 12px;
+    margin-bottom: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 15px;
     outline: none;
     background-color: var(--light-color);
-}
-
-.contact-form input:focus, .contact-form select:focus {
-    border-color: var(--secondary-color);
 }
 
 .btn-submit {
@@ -367,11 +350,7 @@ body {
     width: 100%;
 }
 
-.btn-submit:hover {
-    background-color: var(--primary-color);
-}
-
-/* Інтерактивне Модальне Вікно (Поп-ап) */
+/* Модальне вікно */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -395,9 +374,9 @@ body {
 
 .modal-box {
     background-color: #fff;
-    padding: 40px;
+    padding: 30px;
     border-radius: 15px;
-    max-width: 500px;
+    max-width: 450px;
     width: 90%;
     position: relative;
     transform: scale(0.7);
@@ -405,62 +384,66 @@ body {
     text-align: center;
 }
 
-.modal-overlay.active .modal-box {
-    transform: scale(1);
-}
+.modal-overlay.active .modal-box { transform: scale(1); }
 
 .close-modal-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 10px;
+    right: 15px;
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
     color: #aaa;
 }
 
-.close-modal-btn:hover {
-    color: #333;
-}
-
-.modal-body {
-    margin: 25px 0;
-    text-align: left;
-}
-
-.modal-body h4 {
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
+.modal-body { margin: 20px 0; text-align: left; }
 .modal-meta {
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     background-color: var(--light-color);
-    padding: 15px;
+    padding: 12px;
     border-radius: 8px;
-    font-size: 14px;
 }
 
-/* Підвал */
 footer {
     background-color: var(--dark-color);
     color: #fff;
     text-align: center;
-    padding: 30px 0;
-    font-size: 14px;
+    padding: 25px 0;
+    font-size: 13px;
 }
 
-/* Адаптивність для телефонів */
+/* Адаптивність для телефонів (ВИПРАВЛЕНО ТУТ) */
 @media (max-width: 768px) {
-    .nav-links, .btn-nav {
-        display: none;
+    .navbar .container {
+        flex-direction: column; /* Ставить назву і кнопки один під одним */
+        gap: 10px;
     }
+    
+    .nav-links {
+        flex-wrap: wrap; /* Дозволяє кнопкам переноситися на новий рядок, якщо екран дуже маленький */
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 12px; /* Трохи зменшуємо шрифт кнопок на телефонах */
+        margin: 0 5px;
+    }
+
+    .btn-nav {
+        display: none; /* Ховаємо тільки одну велику кнопку «Забронювати» з шапки, щоб не забивати екран */
+    }
+
     .hero-content h1 {
-        font-size: 32px;
+        font-size: 28px;
     }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
     .contact-wrapper {
         flex-direction: column;
     }
